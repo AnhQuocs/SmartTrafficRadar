@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Smart Traffic Radar</string>
+
+    <!-- BOTTOM BAR -->
+    <string name="dashboard">Bảng điều khiển</string>
+    <string name="violations">Vi phạm</string>
+    <string name="control">Điều khiển</string>
+    <string name="status">Trạng thái</string>
+
+    <!-- SETTING-LANGUAGE -->
+    <string name="language">Ngôn ngữ</string>
+    <string name="select_language">Chọn ngôn ngữ</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="apply">Áp dụng</string>
+
+</resources>

@@ -1,4 +1,4 @@
-package com.example.smarttrafficradar.features.main.ui
+package com.example.smarttrafficradar
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
