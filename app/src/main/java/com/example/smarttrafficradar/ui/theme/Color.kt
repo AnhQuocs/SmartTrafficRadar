@@ -61,3 +61,5 @@ val DarkOnSurface = Color(0xFFE2E2E6)
 // Màu báo lỗi
 val DarkError = Color(0xFFFFB4AB)
 val DarkOnError = Color(0xFF690005)
+
+val NeonGreen = Color(0xFF00FF41)

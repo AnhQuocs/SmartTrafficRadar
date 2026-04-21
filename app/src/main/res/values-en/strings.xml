@@ -14,4 +14,8 @@
     <string name="vietnamese">Vietnamese</string>
     <string name="apply">Apply</string>
 
+    <!-- DASHBOARD -->
+    <string name="error_unexpected">An unexpected error occurred</string>
+    <string name="real_time_monitoring_active">Real-time monitoring active</string>
+
 </resources>

@@ -31,7 +31,7 @@ class MainActivity : BaseComponentActivity() {
                 Box(
                     modifier = Modifier.fillMaxSize()
                 ) {
-
+                    MainScreen()
                 }
             }
         }

@@ -14,4 +14,9 @@
     <string name="vietnamese">Tiếng Việt</string>
     <string name="apply">Áp dụng</string>
 
+
+    <!-- DASHBOARD -->
+    <string name="error_unexpected">Đã xảy ra lỗi không mong muốn</string>
+    <string name="real_time_monitoring_active">Giám sát thời gian thực đang hoạt động</string>
+
 </resources>
