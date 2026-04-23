@@ -7,10 +7,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -19,10 +16,9 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import com.example.smarttrafficradar.components.AppBottomBar
 import com.example.smarttrafficradar.features.control.ControlScreen
-import com.example.smarttrafficradar.features.dashboard.presentation.ui.DashboardScreen
+import com.example.smarttrafficradar.features.dashboard.ui.DashboardScreen
 import com.example.smarttrafficradar.features.status.StatusScreen
 import com.example.smarttrafficradar.features.violation.ViolationScreen
 
