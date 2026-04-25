@@ -20,7 +20,7 @@ import com.example.smarttrafficradar.components.AppBottomBar
 import com.example.smarttrafficradar.features.control.ControlScreen
 import com.example.smarttrafficradar.features.dashboard.ui.DashboardScreen
 import com.example.smarttrafficradar.features.status.StatusScreen
-import com.example.smarttrafficradar.features.violation.ViolationScreen
+import com.example.smarttrafficradar.features.violation.presentation.ui.ViolationScreen
 
 @Composable
 fun MainScreen() {

@@ -63,3 +63,4 @@ val DarkError = Color(0xFFFFB4AB)
 val DarkOnError = Color(0xFF690005)
 
 val NeonGreen = Color(0xFF00FF41)
+val ErrorRed = Color(0xFFFF3B30)

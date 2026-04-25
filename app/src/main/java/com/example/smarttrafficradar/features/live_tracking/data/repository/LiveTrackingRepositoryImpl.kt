@@ -20,25 +20,23 @@ class LiveTrackingRepositoryImpl @Inject constructor(
 ) : LiveTrackingRepository {
 
     override fun observeLiveTracking(nodeId: String): Flow<LiveTracking> = callbackFlow {
+        // SỬA Ở ĐÂY: Bỏ cái .child("latest_vehicle") đi
         val ref = realtimeDb.getReference("live_tracking")
             .child(nodeId)
-            .child("latest_vehicle")
 
         val listener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 Log.d("FirebaseData", "Snapshot: ${snapshot.value}")
+
+                // Bây giờ snapshot sẽ chứa {latest_vehicle: {...}, recent_vehicles: {...}}
+                // Nó sẽ khớp hoàn toàn với cấu trúc của LiveTrackingDto
                 val dto = snapshot.getValue(LiveTrackingDto::class.java)
                 Log.d("FirebaseData", "DTO: $dto")
 
                 val liveTracking = dto?.toDomain(nodeId) ?: LiveTracking(
                     nodeId = nodeId,
-                    lastVehicle = LastVehicle(
-                        isViolation = false,
-                        speedKmh = 0.0,
-                        timestamp = 0L,
-                        vehicleId = "No Data"
-                    ),
-                    recentSpeeds = emptyList()
+                    lastVehicle = LastVehicle(false, 0.0, 0L, "No Data"),
+                    recentEntries = emptyList()
                 )
 
                 trySend(liveTracking)
@@ -50,7 +48,6 @@ class LiveTrackingRepositoryImpl @Inject constructor(
         }
 
         ref.addValueEventListener(listener)
-
         awaitClose { ref.removeEventListener(listener) }
     }
 }

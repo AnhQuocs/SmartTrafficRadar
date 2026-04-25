@@ -18,5 +18,6 @@
     <!-- DASHBOARD -->
     <string name="error_unexpected">Đã xảy ra lỗi không mong muốn</string>
     <string name="real_time_monitoring_active">Giám sát thời gian thực đang hoạt động</string>
+    <string name="speed_analysis_recent_10">PHÂN TÍCH TỐC ĐỘ (10 XE GẦN NHẤT)</string>
 
 </resources>

@@ -37,10 +37,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.smarttrafficradar.R
 import com.example.smarttrafficradar.ui.dimens.Dimen
+import com.example.smarttrafficradar.ui.theme.ErrorRed
 import java.text.DecimalFormat
 
 @Composable
-fun RadarView(currentSpeed: Double) {
+fun RadarView(currentSpeed: Double, isViolation: Boolean) {
     // Lấy màu chủ đạo (Primary) và màu nền (Background) từ Theme hiện tại
     val primaryColor = MaterialTheme.colorScheme.primary
     val backgroundColor = MaterialTheme.colorScheme.background
@@ -138,18 +139,18 @@ fun RadarView(currentSpeed: Double) {
             Icon(
                 painter = painterResource(id = R.drawable.ic_radar_speed),
                 contentDescription = null,
-                tint = primaryColor,
+                tint = if(isViolation) ErrorRed else primaryColor,
                 modifier = Modifier.size(Dimen.SizeL)
             )
 
             Text(
                 text = speedText,
-                color = primaryColor,
+                color = if(isViolation) ErrorRed else primaryColor,
                 fontSize = 72.sp,
                 fontWeight = FontWeight.Bold,
                 style = TextStyle(
                     shadow = Shadow(
-                        color = primaryColor.copy(alpha = 0.8f),
+                        color = if(isViolation) ErrorRed.copy(alpha = 0.8f) else primaryColor.copy(alpha = 0.8f),
                         blurRadius = 20f
                     )
                 )

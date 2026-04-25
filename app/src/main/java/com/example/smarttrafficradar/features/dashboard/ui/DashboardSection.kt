@@ -3,6 +3,7 @@ package com.example.smarttrafficradar.features.dashboard.ui
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -48,7 +49,15 @@ fun DashboardSection(state: DashboardState) {
             ) {
                 DashboardHeader()
 
-                RadarView(currentSpeed = liveTracking.lastVehicle.speedKmh)
+                RadarView(
+                    currentSpeed = liveTracking.lastVehicle.speedKmh,
+                    isViolation = liveTracking.lastVehicle.isViolation
+                )
+
+                SpeedAnalysisChart(
+                    speedEntries = state.liveTracking.recentEntries.map { it.speed to it.isViolation },
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     }

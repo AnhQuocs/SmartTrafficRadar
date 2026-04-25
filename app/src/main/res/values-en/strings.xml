@@ -17,5 +17,6 @@
     <!-- DASHBOARD -->
     <string name="error_unexpected">An unexpected error occurred</string>
     <string name="real_time_monitoring_active">Real-time monitoring active</string>
+    <string name="speed_analysis_recent_10">SPEED ANALYSIS (RECENT 10)</string>
 
 </resources>
